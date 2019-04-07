@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../hmily" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-annotation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-account" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-account-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-inventory" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-inventory-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-account" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-inventory" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-motan" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-motan" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-springcloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hmily/hmily-tcc-springcloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_redis" charset="UTF-8" />
+  </component>
+</project>

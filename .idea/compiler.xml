@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hmily-tcc-admin" />
+        <module name="hmily-tcc-annotation" />
+        <module name="hmily-tcc-common" />
+        <module name="hmily-tcc-core" />
+        <module name="hmily-tcc-demo-dubbo-account" />
+        <module name="hmily-tcc-demo-dubbo-account-api" />
+        <module name="hmily-tcc-demo-dubbo-inventory" />
+        <module name="hmily-tcc-demo-dubbo-inventory-api" />
+        <module name="hmily-tcc-demo-dubbo-order" />
+        <module name="hmily-tcc-demo-springcloud-account" />
+        <module name="hmily-tcc-demo-springcloud-eureka" />
+        <module name="hmily-tcc-demo-springcloud-inventory" />
+        <module name="hmily-tcc-demo-springcloud-order" />
+        <module name="hmily-tcc-dubbo" />
+        <module name="hmily-tcc-motan" />
+        <module name="hmily-tcc-spring-boot-starter-dubbo" />
+        <module name="hmily-tcc-spring-boot-starter-motan" />
+        <module name="hmily-tcc-spring-boot-starter-parent" />
+        <module name="hmily-tcc-spring-boot-starter-springcloud" />
+        <module name="hmily-tcc-springcloud" />
+        <module name="spring_redis" />
+        <module name="spring_thread" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="hmily-tcc" target="1.8" />
+      <module name="hmily-tcc-admin" target="1.8" />
+      <module name="hmily-tcc-annotation" target="1.8" />
+      <module name="hmily-tcc-common" target="1.8" />
+      <module name="hmily-tcc-core" target="1.8" />
+      <module name="hmily-tcc-demo" target="1.8" />
+      <module name="hmily-tcc-demo-dubbo" target="1.8" />
+      <module name="hmily-tcc-demo-dubbo-account" target="1.8" />
+      <module name="hmily-tcc-demo-dubbo-account-api" target="1.8" />
+      <module name="hmily-tcc-demo-dubbo-inventory" target="1.8" />
+      <module name="hmily-tcc-demo-dubbo-inventory-api" target="1.8" />
+      <module name="hmily-tcc-demo-dubbo-order" target="1.8" />
+      <module name="hmily-tcc-demo-springcloud" target="1.8" />
+      <module name="hmily-tcc-demo-springcloud-account" target="1.8" />
+      <module name="hmily-tcc-demo-springcloud-eureka" target="1.8" />
+      <module name="hmily-tcc-demo-springcloud-inventory" target="1.8" />
+      <module name="hmily-tcc-demo-springcloud-order" target="1.8" />
+      <module name="hmily-tcc-dubbo" target="1.8" />
+      <module name="hmily-tcc-motan" target="1.8" />
+      <module name="hmily-tcc-spring-boot-starter" target="1.8" />
+      <module name="hmily-tcc-spring-boot-starter-dubbo" target="1.8" />
+      <module name="hmily-tcc-spring-boot-starter-motan" target="1.8" />
+      <module name="hmily-tcc-spring-boot-starter-parent" target="1.8" />
+      <module name="hmily-tcc-spring-boot-starter-springcloud" target="1.8" />
+      <module name="hmily-tcc-springcloud" target="1.8" />
+      <module name="spring_redis" target="1.5" />
+      <module name="spring_thread" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

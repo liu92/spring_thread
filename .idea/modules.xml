@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-admin/hmily-tcc-admin.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-admin/hmily-tcc-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-annotation/hmily-tcc-annotation.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-annotation/hmily-tcc-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-common/hmily-tcc-common.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-common/hmily-tcc-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-core/hmily-tcc-core.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-core/hmily-tcc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-account/hmily-tcc-demo-dubbo-account.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-account/hmily-tcc-demo-dubbo-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-account-api/hmily-tcc-demo-dubbo-account-api.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-account-api/hmily-tcc-demo-dubbo-account-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-inventory/hmily-tcc-demo-dubbo-inventory.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-inventory/hmily-tcc-demo-dubbo-inventory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-inventory-api/hmily-tcc-demo-dubbo-inventory-api.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-inventory-api/hmily-tcc-demo-dubbo-inventory-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-order/hmily-tcc-demo-dubbo-order.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-dubbo/hmily-tcc-demo-dubbo-order/hmily-tcc-demo-dubbo-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-account/hmily-tcc-demo-springcloud-account.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-account/hmily-tcc-demo-springcloud-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-eureka/hmily-tcc-demo-springcloud-eureka.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-eureka/hmily-tcc-demo-springcloud-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-inventory/hmily-tcc-demo-springcloud-inventory.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-inventory/hmily-tcc-demo-springcloud-inventory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-order/hmily-tcc-demo-springcloud-order.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-demo/hmily-tcc-demo-springcloud/hmily-tcc-demo-springcloud-order/hmily-tcc-demo-springcloud-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-dubbo/hmily-tcc-dubbo.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-dubbo/hmily-tcc-dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-motan/hmily-tcc-motan.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-motan/hmily-tcc-motan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-dubbo/hmily-tcc-spring-boot-starter-dubbo.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-dubbo/hmily-tcc-spring-boot-starter-dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-motan/hmily-tcc-spring-boot-starter-motan.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-motan/hmily-tcc-spring-boot-starter-motan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-parent/hmily-tcc-spring-boot-starter-parent.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-parent/hmily-tcc-spring-boot-starter-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-springcloud/hmily-tcc-spring-boot-starter-springcloud.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-spring-boot-starter/hmily-tcc-spring-boot-starter-springcloud/hmily-tcc-spring-boot-starter-springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hmily/hmily-tcc-springcloud/hmily-tcc-springcloud.iml" filepath="$PROJECT_DIR$/../hmily/hmily-tcc-springcloud/hmily-tcc-springcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring_redis/spring_redis.iml" filepath="$PROJECT_DIR$/../spring_redis/spring_redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_thread.iml" filepath="$PROJECT_DIR$/spring_thread.iml" />
+    </modules>
+  </component>
+</project>
