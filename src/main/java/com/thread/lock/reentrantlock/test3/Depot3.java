@@ -33,14 +33,15 @@ public class Depot3 {
 	 * // 消费条件
 	 */
    private Condition emptyCondition;
+
    public static ReentrantLock lock1 = new ReentrantLock();
    
     Depot3(int capacity){
 	   this.capacity= capacity;
 	   this.size=0;
 	   this.lock= new ReentrantLock();
-	   this.fullCondition=lock.newCondition();
-	   this.emptyCondition=lock.newCondition();
+	   this.fullCondition = lock.newCondition();
+	   this.emptyCondition = lock.newCondition();
    }
    
    /**用来获取锁。如果锁已被其他线程获取，则进行等待。
@@ -64,15 +65,13 @@ public class Depot3 {
    public void produce(int val){
 	   lock.lock();
 	   try {
-
-
 		  // left 表示“想要生产的数量”(有可能生产量太多，需多此生产)
 		  // size=0 ,capacity=100;
-		   int left=val;
-		   while (left>0) {
+		   int left = val;
+		   while (left > 0) {
 			// 库存已满时，等待“消费者”消费产品。
 			  while (size >= capacity) {
-				  fullCondition.await();//使线程阻塞
+				  fullCondition.await();//使线程阻塞 ，阻塞生产线程
 			  }
 				// 获取“实际生产的数量”(即库存中新增的数量)
                 // 如果“库存”+“想要生产的数量”>“总的容量”，则“实际增量”=“总的容量”-“当前容量”。(此时填满仓库)
@@ -80,7 +79,7 @@ public class Depot3 {
 				/**
 				 * 实际生成数量
 				 */
-			    //第一次进来后 是初始化 值 所以size最开始 是0，在进入到这里是 inc = (0+60) ? 100(100-0) : 60 ,so inc=60。
+			    //第一次进来后 是初始化 值 所以size最开始 是0，在进入到这里是 inc = (0+60) >100 ?(100-0) : 60 ,so inc=60。
 			    //第一个线程 进来后  赋值后size=60
 			    //第二个线程 进来后  size还是=60 ，left=120。所以实际容量是100-60=40 ，再进行size+=inc=60+40, left-=inc=120-40
 				int inc = (size+left) > capacity ? (capacity-size) : left;
@@ -89,7 +88,7 @@ public class Depot3 {
 				left-=inc;
 				System.out.printf("%s produce(%3d) --> 想要生成的数量:left=%3d, 实际数量增加:inc=%3d, 仓库的实际数量:size=%3d\n",
 	                        Thread.currentThread().getName(), val, left, inc, size);
-	                // 通知“消费者”可以消费了。
+	                // 通知“消费者”可以消费了，唤醒消费线程
 	            emptyCondition.signal();
 			 
 		  }
@@ -104,8 +103,8 @@ public class Depot3 {
 	   lock.lock();
 	   try {
 		   // left 表示“客户要消费数量”(有可能消费量太大，库存不够，需多此消费)
-		   int left=val;
-		   while (left>0) {
+		   int left = val;
+		   while (left > 0) {
 			   // 库存为0时，等待“生产者”生产产品。
 			   while (size<=0) {
 				   emptyCondition.await();

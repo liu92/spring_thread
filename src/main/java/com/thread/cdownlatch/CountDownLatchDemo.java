@@ -24,6 +24,7 @@ import java.util.concurrent.*;
  */
 public class CountDownLatchDemo {
    static final CountDownLatch countDownLatch = new CountDownLatch(2);
+
     public static void main(String[] args) {
 
 

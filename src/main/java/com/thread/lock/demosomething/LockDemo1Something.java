@@ -2,10 +2,7 @@ package com.thread.lock.demosomething;
 
 import com.thread.lock.DefaultThreadFactory;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  *  测试"实例锁" 和 "全局锁"
@@ -30,12 +27,16 @@ public class LockDemo1Something {
 
 		ExecutorService executorService = new ThreadPoolExecutor(5,
 				50, 200,
-				TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(1024),
+				TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(1024),
 				new DefaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
-		executorService.execute(() -> x.isSyncA());
+        int  t =20;
+		for (int i = 0; i < t; i++) {
+			executorService.execute(() -> x.isSyncA());
 
-		executorService.execute(() -> x.isSyncB());
+			executorService.execute(() -> x.isSyncB());
+		}
+
 
 
 		executorService.shutdown();
