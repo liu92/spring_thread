@@ -5,19 +5,7 @@
   <groupId>spring_thread</groupId>
   <artifactId>spring_thread</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+
   <packaging>war</packaging>
   <properties>
     <!-- spring版本号 -->
@@ -27,9 +15,11 @@
     <!-- log4j日志文件管理包版本 -->
     <slf4j.version>1.7.7</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
-    <jackson.version>2.9.8</jackson.version>
+    <jackson.core.version>2.9.9</jackson.core.version>
+    <jackson.databind.version>2.9.9.2</jackson.databind.version>
     <slf4j.version>1.7.25</slf4j.version>
   </properties>
+
 
   <dependencies>
     <dependency>
@@ -152,13 +142,13 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>${jackson.version}</version>
+      <version>${jackson.core.version}</version>
     </dependency>
 
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>${jackson.version}</version>
+      <version>${jackson.databind.version}</version>
     </dependency>
 
 
@@ -208,4 +198,34 @@
     </dependency>
 
   </dependencies>
+
+  <build>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <!--在添加了该插件之后，当运行“mvn package”进行打包时，
+          会打包成一个可以直接运行的 JAR 文件，使用“java -jar”命令就可以直接运行。
+          这在很大程度上简化了应用的部署，只需要安装了 JRE 就可以运行。-->
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+
+        <plugin>
+          <!-- 指定maven编译的jdk版本,如果不指定,maven3默认用jdk 1.5 maven2默认用jdk1.3 -->
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+          <configuration>
+            <!-- 一般而言，target与source是保持一致的，但是，
+            有时候为了让程序能在其他版本的jdk中运行(对于低版本目标jdk，
+            源代码中不能使用低版本jdk中不支持的语法)，会存在target不同于source的情况 -->
+            <source>1.8</source> <!-- 源代码使用的JDK版本 -->
+            <target>1.8</target> <!-- 需要生成的目标class文件的编译版本 -->
+            <encoding>UTF-8</encoding> <!-- 字符集编码 -->
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
