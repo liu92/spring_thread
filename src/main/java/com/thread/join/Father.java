@@ -19,6 +19,7 @@ public class Father extends Thread{
 	   s.start();
 	   s.join();
 
+
 //		System.out.printf("%s start\n",this.getName());
 //	    for (int i = 0; i < 5; i++) {
 //		 System.out.printf("%s finish\n",this.getName());

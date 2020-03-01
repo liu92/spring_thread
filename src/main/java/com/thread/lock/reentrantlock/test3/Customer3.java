@@ -3,7 +3,7 @@ package com.thread.lock.reentrantlock.test3;
 import com.thread.lock.DefaultThreadFactory;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -26,7 +26,7 @@ public class Customer3 {
 
 		ExecutorService executorService = new ThreadPoolExecutor(5,
 				50, 200,
-				TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(1024),
+				TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(1024),
 				new DefaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 		executorService.execute(()->depot3.consume(val));
 		executorService.shutdown();

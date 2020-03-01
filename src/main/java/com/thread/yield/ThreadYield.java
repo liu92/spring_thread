@@ -20,7 +20,9 @@ public class ThreadYield extends Thread{
 			System.out.printf("%s [%d]:%d\n",this.getName(),this.getPriority(),i);
 			// i整除4时，调用yield
 			if(i%4==0){
+				System.out.println("当前线程的开始状态-------------"+Thread.currentThread().getState());
 				Thread.yield();
+				System.out.println("当前线程执行yield后状态-------------"+Thread.currentThread().getState());
 				System.out.println(i+"线程让步="+this.getName());
 			}
 		}

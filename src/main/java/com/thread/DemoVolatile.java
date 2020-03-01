@@ -1,7 +1,8 @@
 package com.thread;
 
-  /**
-     *  java类简单作用描述
+
+/**
+     *
      * @ProjectName:    DemoVolatile.java
      * @Package:        com.thread
      * @ClassName:      DemoVolatile
@@ -15,16 +16,41 @@ package com.thread;
      */
 
 public class DemoVolatile {
-    private static volatile  DemoVolatile instance = null;
 
-    public  static DemoVolatile getInstance(){
-        if(instance == null){
-            instance  = new DemoVolatile();
-        }
-        return  instance;
-    }
+   private static volatile  boolean initFlag = false;
+
+   /**
+    *
+    */
+    static void refresh(){
+        System.out.println("refresh data......");
+        initFlag = true;
+        System.out.println("refresh data success");
+   }
+
+
+    static  void  loadData(){
+       while (!initFlag){
+
+       }
+       System.out.println("线程：" + Thread.currentThread().getName() +"" +
+                " 当前线程已经知道initFlag的状态改变");
+   }
 
       public static void main(String[] args) {
-          DemoVolatile.getInstance();
+          Thread threadA = new Thread(()-> loadData(),"threadA");
+          threadA.start();
+
+          try {
+              Thread.sleep(500);
+          } catch (InterruptedException e) {
+              e.printStackTrace();
+          }
+
+          Thread threadB = new Thread(()-> refresh(), "threadB");
+          threadB.start();
       }
+
+
+      
 }

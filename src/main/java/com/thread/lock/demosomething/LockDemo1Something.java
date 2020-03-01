@@ -7,7 +7,8 @@ import java.util.concurrent.*;
 /**
  *  测试"实例锁" 和 "全局锁"
  * 实例锁：锁在某一个实例对象上。如果该类是单例，那么该锁也具有全局锁的概念。实例锁对应的就是synchronized关键字
- * 全局锁：该锁针对的是类，无论实例多少个对象，那么线程都共享该锁。全局锁对应的就是static synchronized（或者是锁在该类的class或者classloader对象上）。
+ * 全局锁：该锁针对的是类，无论实例多少个对象，那么线程都共享该锁。
+ * 全局锁对应的就是static synchronized（或者是锁在该类的class或者classloader对象上）。
  * 
  * <p>Title:LockDemo1</p>
  * @author liuwanlin
@@ -24,18 +25,38 @@ public class LockDemo1Something {
 	 */
 	private void Test1(){
 
-
+		ArrayBlockingQueue<Runnable> arrayBlockingQueue = new ArrayBlockingQueue<>(5);
 		ExecutorService executorService = new ThreadPoolExecutor(5,
-				50, 200,
-				TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(1024),
+				10, 200,
+				TimeUnit.MILLISECONDS, arrayBlockingQueue,
 				new DefaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
-        int  t =20;
-		for (int i = 0; i < t; i++) {
-			executorService.execute(() -> x.isSyncA());
+        int  t =100;
 
-			executorService.execute(() -> x.isSyncB());
+		long a = 0;
+
+		for(int i=0;i<t;i++){
+			MyTask myTask = new MyTask(i);
+			try{
+				a= System.currentTimeMillis();
+				executorService.execute(myTask);
+				if(arrayBlockingQueue.size()>0){
+					System.out.println("被阻塞的线程数为："+arrayBlockingQueue.size());
+				}
+			}catch (Exception e){
+				e.printStackTrace();
+			}finally {
+				long b = System.currentTimeMillis()-a;
+				System.out.println("线程提交时间间隔"+b);
+			}
 		}
+
+
+//		for (int i = 0; i < t; i++) {
+//			executorService.execute(() -> x.isSyncA());
+//
+//			executorService.execute(() -> x.isSyncB());
+//		}
 
 
 
@@ -86,4 +107,26 @@ public class LockDemo1Something {
 	 pool-1-thread2  : isSynB
 	 pool-1-thread2  : isSynB
 	 */
+	static class MyTask implements Runnable {
+		private int taskNum;
+
+		public MyTask(int num) {
+			this.taskNum = num;
+		}
+		@Override
+		public void run() {
+			System.out.println("正在执行task "+taskNum);
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println("task "+taskNum+"执行完毕");
+		}
+	}
+
+
 }
+
+
+

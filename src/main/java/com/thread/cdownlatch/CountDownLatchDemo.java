@@ -30,14 +30,16 @@ public class CountDownLatchDemo {
 
         ExecutorService executorService = new ThreadPoolExecutor(5,
                 50, 200,
-                TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(1024),
+                TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(1024),
                 new DefaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
         executorService.execute(new ThreadA());
         executorService.execute(new ThreadB());
         executorService.shutdown();
         try {
             System.out.println("等待2个子线程执行完毕...");
+            System.out.println("当前线程的开始状态-------------"+Thread.currentThread().getState());
             countDownLatch.await();
+            System.out.println("当前线程执行await的状态-------------"+Thread.currentThread().getState());
             System.out.println("2个子线程已经执行完毕");
             System.out.println("继续执行主线程");
         } catch (InterruptedException e) {

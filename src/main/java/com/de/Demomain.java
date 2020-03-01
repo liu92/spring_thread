@@ -20,9 +20,19 @@ package com.de;
  */
 public class Demomain {
     public static void main(String[] args) {
-        DemoProt   prot = new DemoProt();
+//        DemoProt   prot = new DemoProt();
+//
+//        System.out.println(prot.getClass().getClassLoader());
 
-        System.out.println(prot.getClass().getClassLoader());
+        Object[] t = {10, 3 ,5, 9};
 
+        System.out.println("获取class--------"+t.getClass());
+        // 获取class--------class [Ljava.lang.Object;
+        System.out.println("获取class的componentType--------"+t.getClass().getComponentType());
+
+
+        Object object = "34";
+        System.out.println("不是数组获取class的componentType--------"+object.getClass().getComponentType());
+        //不是数组获取class的componentType--------null
     }
 }

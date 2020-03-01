@@ -22,10 +22,11 @@ public class CustomizePoolExeutor {
         CustomizeRejectedExecutionHandler executionHandler = new CustomizeRejectedExecutionHandler();
 
         // 创建 有界工作队列
-        BlockingQueue<Runnable> q = new ArrayBlockingQueue<Runnable>(10);
+        BlockingQueue<Runnable> q = new ArrayBlockingQueue<>(10);
 
-        ThreadPoolExecutor threadPoolExecutor =new ThreadPoolExecutor(4,8,10, TimeUnit.SECONDS,q,
-                customizeThreadFactory,executionHandler);
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(4,
+                8,10, TimeUnit.SECONDS,q,
+                customizeThreadFactory, executionHandler);
 
         for (int i = 0; i <10 ; i++) {
 

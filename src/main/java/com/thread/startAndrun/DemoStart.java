@@ -17,6 +17,10 @@ public class DemoStart {
       Thread thread = new Thread(new DemoRunnable());
       thread.run();
       thread.start();
+
+    /**
+     * start()不能被重复调用 ，Exception in thread "main" java.lang.IllegalThreadStateException
+     */
       thread.start();
      // 从结果来看  startDemo.run()是在“主线程main”中调用的，该run()方法直接运行在“主线程main”上。
      // main call startDemo.run

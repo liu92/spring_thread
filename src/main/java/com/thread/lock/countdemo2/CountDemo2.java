@@ -30,6 +30,32 @@ public class CountDemo2 {
 		}
 	}
 
+
+	/**
+	 * 这个方法也就等同于 ，在方法的执行时 要 synchronized (this), 所以 执行代码的时候不是锁定整段代码，而是锁定当前对象。
+	 */
+	public synchronized  void  tm(){
+		System.out.println("-----tm-----");
+	}
+
+	/**
+	 * 这里等同于 synchronized (CountDemo2.class)
+	 */
+	public static synchronized  void  test(){
+		System.out.println("----test------");
+	}
+
+	/**
+	 * 这里等同于 synchronized (CountDemo2.class)
+	 */
+	public static void  dem(){
+		// 这里能写成 synchronized (this) 是否可以？ 因为静态的属性和方法你是不需要去new 出对象的。
+		// 那么这个对象不new出来 那么就没有this的存在。
+		synchronized (CountDemo2.class){
+			System.out.println("-----------------");
+		}
+	}
+
 	/**
 	 * 非同步的方法
 	 */

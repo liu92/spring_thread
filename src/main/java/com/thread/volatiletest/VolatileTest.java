@@ -1,5 +1,7 @@
 package com.thread.volatiletest;
 
+import java.util.LinkedHashMap;
+
 /**
  * volatile变量自增运算测试
  * @ClassName: VolatileTest
@@ -10,4 +12,7 @@ package com.thread.volatiletest;
  * @<version> 1.0
  */
 public class VolatileTest {
+    public static void main(String[] args) {
+        LinkedHashMap<String, String> hashMap = new LinkedHashMap<>();
+    }
 }

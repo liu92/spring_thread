@@ -6,6 +6,22 @@ import java.util.concurrent.*;
 
 /**
  * 测试第一条
+ *
+ *  第一条:
+ * 	// 当一个线程访问“某对象”的“synchronized方法”或者“synchronized代码块”时，
+ * 	// 其他线程对“该对象”的该“synchronized方法”或者“synchronized代码块”的访问将被阻塞。
+ *
+ * 	// 第二条:
+ * 	// 当一个线程访问“某对象”的“synchronized方法”或者“synchronized代码块”时，其他线程仍然可以访问“该对象”的非同步代码块。
+ *
+ * 	 // 第三条:
+ * 	// 当一个线程访问“某对象”的“synchronized方法”或者“synchronized代码块”时，
+ * 	// 其他线程对“该对象”的其他的“synchronized方法”或者“synchronized代码块”的访问将被阻塞。
+ *
+ * 	 // 第四条
+ * 	  一个同步方法可以调用另一个同步方法，一个线程已经拥有某个对象的锁，再次申请的时候仍可以得到该对象的锁
+ * 	   也就是说synchronized获得的锁是可以重入的。
+ *
  * <p>
  * Title:Demo_1
  * </p>

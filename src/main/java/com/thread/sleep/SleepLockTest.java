@@ -37,7 +37,9 @@ public class SleepLockTest {
 	                        System.out.printf("%s: %d\n", this.getName(), i); 
 	                        // i能被4整除时，休眠100毫秒
 	                        if (i%4 == 0) {
+								System.out.println("当前线程的开始状态-------------"+Thread.currentThread().getState());
 								Thread.sleep(100);
+								System.out.println("当前线程执行sleep后的状态-------------"+Thread.currentThread().getState());
 							}
 	                    }
 				} catch (Exception e) {

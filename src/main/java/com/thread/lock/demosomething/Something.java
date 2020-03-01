@@ -23,7 +23,7 @@ package com.thread.lock.demosomething;
 	 synchronized void isSyncA(){
 		
 		try {
-			for (int i = 0; i < 5; i++) {
+			for (int i = 0; i < 100; i++) {
 				Thread.sleep(100);
 				System.out.println(Thread.currentThread().getName()+"  : isSynA");
 			}
@@ -36,7 +36,7 @@ package com.thread.lock.demosomething;
 	 synchronized void isSyncB(){
 		
 		try {
-			for (int i = 0; i < 5; i++) {
+			for (int i = 0; i < 100; i++) {
 				Thread.sleep(100);
 				System.out.println(Thread.currentThread().getName()+"  : isSynB");
 			}
@@ -49,7 +49,7 @@ package com.thread.lock.demosomething;
 	 static synchronized void cSyncA(){
 		
 		try {
-			for (int i = 0; i < 5; i++) {
+			for (int i = 0; i < 100; i++) {
 				Thread.sleep(100);
 				System.out.println(Thread.currentThread().getName()+"  : cSyncA");
 			}
@@ -61,7 +61,7 @@ package com.thread.lock.demosomething;
 	
 	 static synchronized void cSyncB(){
 		try {
-			for (int i = 0; i < 5; i++) {
+			for (int i = 0; i < 100; i++) {
 				Thread.sleep(100);
 				System.out.println(Thread.currentThread().getName()+"  : cSyncB");
 			}

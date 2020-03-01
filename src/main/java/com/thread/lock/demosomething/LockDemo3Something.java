@@ -20,15 +20,15 @@ public class LockDemo3Something {
 	/** // 比较(03) x.cSyncA()与y.cSyncB()*/
 	private void test3(){
 
-		ExecutorService executorService = new ThreadPoolExecutor(5,
-				50, 200,
-				TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(1024),
+		ExecutorService executorService = new ThreadPoolExecutor(2,
+				5, 200,
+				TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(6),
 				new DefaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
 		executorService.execute(Something::cSyncA);
-        executorService.execute(Something::cSyncB);
+//        executorService.execute(Something::cSyncB);
 
-        executorService.shutdown();
+//        executorService.shutdown();
 		/**
 		 *      lamda 第一种写法
 		//	executorService.execute(()->Something.cSyncA());
@@ -57,7 +57,6 @@ public class LockDemo3Something {
 	//	t31  : cSyncA
 	//	t31  : cSyncA
 	//	t31  : cSyncA
-	//	t32  : cSyncB
 	//	t32  : cSyncB
 	//	t32  : cSyncB
 	//	t32  : cSyncB

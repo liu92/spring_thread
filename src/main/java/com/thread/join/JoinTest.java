@@ -16,7 +16,8 @@ public class JoinTest {
  	 		t1.start();
 			// 将线程"t1" 加入到 "主线程 main" 中，并且"主线程" main() 会等待它的 完成。
 			t1.join();
-			System.out.printf("%s finish\n", Thread.currentThread().getName()); 
+			System.out.printf("%s finish\n", Thread.currentThread().getName());
+			System.out.println("当前线程的状态-------------"+Thread.currentThread().getState());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}                  
