@@ -9,14 +9,14 @@
   <packaging>war</packaging>
   <properties>
     <!-- spring版本号 -->
-    <spring.version>5.0.7.RELEASE</spring.version>
+    <spring.version>5.0.16.RELEASE</spring.version>
     <!-- mybatis版本号 -->
     <mybatis.version>3.2.6</mybatis.version>
     <!-- log4j日志文件管理包版本 -->
     <slf4j.version>1.7.7</slf4j.version>
-    <log4j.version>1.2.17</log4j.version>
+    <log4j-core.version>2.13.0</log4j-core.version>
     <jackson.core.version>2.9.9</jackson.core.version>
-    <jackson.databind.version>2.9.9.2</jackson.databind.version>
+    <jackson.databind.version>2.9.10.3</jackson.databind.version>
     <slf4j.version>1.7.25</slf4j.version>
   </properties>
 
@@ -111,9 +111,9 @@
     <!-- 日志文件管理包 -->
     <!-- log start -->
     <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>${log4j.version}</version>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j-core.version}</version>
     </dependency>
 
     <!-- 数据源 -->
