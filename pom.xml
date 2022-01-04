@@ -14,7 +14,7 @@
     <mybatis.version>3.2.6</mybatis.version>
     <!-- log4j日志文件管理包版本 -->
     <slf4j.version>1.7.7</slf4j.version>
-    <log4j-core.version>2.13.0</log4j-core.version>
+    <log4j-core.version>2.17.1</log4j-core.version>
     <jackson.core.version>2.9.9</jackson.core.version>
     <jackson.databind.version>2.9.10.3</jackson.databind.version>
     <slf4j.version>1.7.25</slf4j.version>
